@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">    
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+	    .alerta{
+		    position: relative;
+			width: 400px;
+			height: 50px;
+			background-color: #D63D40;
+			color: white;
+			display: flex;
+		  	align-items: center;
+		  	justify-content: center;
+			left: 50%;
+            margin-left: -200px;
+            display: none;	
+		}
+    </style>    
+</head>
+<body>
+    <center><img src="img/logo.jpeg" width="200px" height="200px"></center>
+ <div id="main">
+	 	<div class="alerta" id="mensagem">-1
+		</div>
+	<center>
+     <form method="POST" action="php/login.php">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label class="titulo1">Usuario</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="campo1"  name="user" id="user">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="titulo2">Senha</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" class="campo2" name="pass" id="pass">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="ENTRAR" id="btEntrar" onclick="login()">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+    </form>
+</div>
+<script>
+        $(document).ready(function(){
+            var valor = $('#user').val();
+            var valor2 = $('#pass').val();            
+            setTimeout(function() {
+            	$('.alerta').fadeOut('fast');}, 5000);
+            
+            
+            $('.campo1').focus(function(e){
+                e.preventDefault();
+                $('.titulo1').animate({marginTop: "-10px", fontSize: "20px"});
+            });
+                $('.campo1').focusout(function(){
+                    valor = $('#user').val();
+                    if(valor != ''){
+                        $('.titulo1').css('marginTop', '-10px');
+                    }else{
+                        $('.titulo1').animate({marginTop: "12px", fontSize: "22px"});
+                    }
+                });
+            $('.campo2').focus(function(e){
+                e.preventDefault();
+                $('.titulo2').animate({marginTop: "-10px", fontSize: "20px"});
+            });
+           
+            $('.campo2').focusout(function(){
+                valor = $('#pass').val();
+                if(valor != ''){
+                    $('.titulo2').css('marginTop', '-10px');
+                }else{
+                    $('.titulo2').animate({marginTop: "12px", fontSize: "22px"});
+                }
+            });
+        });        
+    </script>
+</body>
+</html>

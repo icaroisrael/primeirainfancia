@@ -1,0 +1,80 @@
+body{padding: 0px; margin:0px; border: 0px;}
+#main{
+    position: relative;
+}
+.titulo1{
+    position: absolute;
+    margin-top: 12px;
+    font-size: 22px;
+    color: darkgray;
+}
+.titulo2{
+    position: absolute;
+    margin-top: 12px;
+    font-size: 22px;
+    color: darkgray;
+}
+form tr{
+    position: relative;
+    height: 35px;
+    margin: 0 auto;   
+}
+form input{
+    font-family: humnst777 blk;
+    font-style: bold;
+    font-size: 20px;
+    height: 30px;
+    width: 400px;
+    outline: none;
+}
+form{
+    margin-top: 40px;    
+}
+img{
+    margin-top: 40px;
+}
+.campo1{
+    border: 0px;
+    border-bottom: 3px solid;
+    border-bottom-color:#e6eaf2;
+    transition: width 0.2s ease;
+    transition-property: border-color;
+    transition-duration: 0.1s;
+    transition-delay: 0.3s;
+}
+.campo2{
+    border: 0px;
+    border-bottom: 3px solid;
+    border-bottom-color:#e6eaf2;
+    transition: width 0.2s;
+    transition-property: border-color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-delay: 0.3s;
+}
+.campo1:focus{
+    border-bottom-color:#008ece;
+    box-shadow: none !important;
+}
+.campo2:focus{
+    border-bottom-color:#008ece;
+}
+#btEntrar{
+    margin-top: 60px;
+    background-color:#008ECE;
+    height: 50px;
+    color: white;
+    border-radius: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 0.9;
+    box-shadow: 1px 1px 10px aquamarine;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0.2s;
+}
+#btEntrar:hover{
+    box-shadow: 5px 5px 10px #fec52d;
+}
+
+
